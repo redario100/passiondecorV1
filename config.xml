@@ -3,26 +3,20 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.fly.view"
-        version   = "1.0.0">
+        id        = "com.passiondecor.net"
+        version   = "2.0.0">
 
-    <name>Fly View</name>
+    <name>Passiondecor</name>
 
     <description>
-       Fly View
+     Passiondecor
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
-        Fly View
+    Passiondecor
     </author>
-
-    <!--
-        If you do not want any permissions to be added to your app, add the
-        following tag to your config.xml; you will still have the INTERNET
-        permission on your app, which PhoneGap requires.
-    -->
 	
-	<content src="home.html" />
+	<content src="index.html" />
 		<feature name="InAppBrowser">
     <param name="android-package" value="org.apache.cordova.InAppBrowser" />
 </feature>
@@ -144,7 +138,7 @@
 	
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-    <string>100</string>
+    <string>200</string>
     </gap:config-file>
 
 	
