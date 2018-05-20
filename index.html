@@ -4,14 +4,18 @@
 	<title>Fly View</title>
 	 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
  <style>
+html,body,li,a,h1,span, div
+{
+font-family: 'Josefin Sans', sans-serif;
+}
 
-@font-face {
-  font-family: 'Exo 2';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Exo 2 Light'), local('Exo2-Light'), url(ert.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+#bloc0
+{
+width:29%;
+float:left;
+margin:2%;
 }
 
 .btnext
@@ -30,7 +34,7 @@
 	background:#c02e7da8;
     text-align: left;
     font-size: 1.9em;
-    margin-top: -70px;
+    margin-top: -73px;
     width: 86%;
     position: absolute;
     z-index: 200;
@@ -43,11 +47,11 @@
 
     text-align: left;
     /* position: absolute; */
-    font-size: 1.9em;
+    font-size: 1.7em;
     margin-top: -70px;
     width: 86%;
     position: absolute;
-    z-index: 9999999;
+    z-index: 999;
 }
 
 .btnext2
@@ -97,8 +101,15 @@ box-shadow:0 0 0.4em grey !important;
 
 	<script>
 	
-	function load_home() {
-     document.getElementById("mapage").innerHTML='<object style="width:100%;height:100%;" type="text/html" data="https://passiondecor.net/fr/n%C5%93ud-de-chaise-63" ></object>';
+	function load_home(url) {
+	$('#bg1').show();
+	$('#loader1').show();
+	document.getElementById("mapage").innerHTML='<object onclick="alert("reda")" style="width:100%;height:100%;" type="text/html" data="'+url+'" ></object>';
+
+	setTimeout(function(){ 
+	$('#bg1').hide();
+	$('#loader1').hide();
+	 }, 2500);
 }
 	   function bloc1()
 {
@@ -311,64 +322,39 @@ $('#bloc7').html('');
 	  
 	   }
 	   
-function isPhoneGap() {
-    return (window.cordova || window.PhoneGap || window.phonegap) 
-    && /^file:\/{3}[^\/]/i.test(window.location.href) 
-    && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
-}
-
-if ( isPhoneGap() ) {
-alert("c phonegap");
- $('header .nav').hide();
-    $('.ttheader').hide();
-	 $('.ttbreadcrumb-bg').hide();
-	  $('.content_scene_cat').hide();
-	  $('#ttcmsrightservices').hide();
-	  $('block block-faq-left-column').hide();
-	  $('#newsletter_block_left').hide();
-	  $('#ttrightbanner').hide();
-	  $('#new-products_block_right').hide();
-	  $('#special_block_right').hide();
-	  $('#ttleftbanner').hide();
-	  $('.block').hide();
-	  $('#widget_block').hide();
-	  $('.compare-form').hide();
-	  $('.columns-container').css("background-color", "white");
-
-} else {
-    alert("Not running on PhoneGap!");
-}
 </script>
 </head>
 <body onload="bloc1();bloc2();bloc3();bloc4();bloc5();bloc6();isPhoneGap();">
+<div id="bg1" style="background:#f9f9f9c9;position:absolute;width:100%;height:100%;z-index:9990;display:none;" ></div>
+<img id="loader1" style="display:none;width:50px;z-index:9991;position:absolute;left:0;right:0;margin-left:auto;margin-right:auto;top:48%;" src="load.gif">
 <div data-role="page" style="background-color:white;" id="page1">
 <div data-role="panel" style="box-shadow: 4px 0px -5px 2em grey !important;z-index:9995;" id="left-panel"  data-display="overlay" data-position-fixed="true" > <!--data-display="overlay"-->
 <ul data-role="listview" class="ui-listview">
 <li data-role="list-divider" role="heading" class="menuleft ui-li ui-li-divider ui-bar-d ui-first-child">Menu</li>
-					<a data-transition="slide"  href="#"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div  class="ui-btn-inner ui-li"><div class="ui-btn-text">Housse de chaise</div></div></li></a>
-					<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home()" class="ui-btn-inner ui-li"><div class="ui-btn-text">Noeud de chaise</div></div></li></a>
-				    <a data-transition="slide" href="https://passiondecor.net/fr/chemin-de-table-46"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Chemin de table</div></div></li></a>
-				    <a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Nappe pas cher</div></div></li></a>
-				    <a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Serviette de table</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Vase Martini</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Vase Alu</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Verrerie</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Accessoire de décoration</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Boule de Fleurs</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Fleur artificielle</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Plume</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Projecteur & Led</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Chandelier & Lanterne</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Arbre Artificiel</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Colonne Diamant</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Présentoir Gâteaux</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Table de Réception</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Tapis de Cérémonie</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Allée Centrale</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Rideau & Voilage</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Mur Floral</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Trône & Coin Mariés</div></div></li></a>
-				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Rideau Led & Voilage</div></div></li></a>
+					<a data-transition="slide"  href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/housse-de-chaise-13')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Housse de chaise</div></div></li></a>
+					<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/n%C5%93ud-de-chaise-63')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Noeud de chaise</div></div></li></a>
+				    <a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/chemin-de-table-46')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Chemin de table</div></div></li></a>
+				    <a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/nappe-serviette-pas-cher-40')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Nappe pas cher</div></div></li></a>
+				    <a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/serviette-de-table-47')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Serviette de table</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/vase-martini-30')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Vase Martini</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/vase-alu-48')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Vase Alu</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/verrerie-49')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Verrerie</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/accessoire-de-decoration-42')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Accessoire de décoration</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/boule-de-fleurs-50')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Boule de Fleurs</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/fleur-artificielle-51')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Fleur artificielle</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/plume-52')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Plume</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/projecteur-led-53')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Projecteur & Led</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/chandelier-lanterne-54')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Chandelier & Lanterne</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/arbre-artificiel-55')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Arbre Artificiel</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/colonne-diamant-56')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Colonne Diamant</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/presentoir-gateaux-64')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Présentoir Gâteaux</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/table-de-reception-57')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Table de Réception</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/tapis-de-ceremonie-59')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Tapis de Cérémonie</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/allee-centrale-60')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Allée Centrale</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/vaisselle-de-table-61')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Vaisselle de table</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/rideau-led-et-voilage-66')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Rideau Led & Voilage</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/mur-floral-62')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Mur Floral</div></div></li></a>
+				<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/trone-et-coin-maries-65')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Trône & Coin Mariés</div></div></li></a>
 		</ul>   
 
 
@@ -376,13 +362,34 @@ alert("c phonegap");
 
 	<div id="navbar" style='padding:10px 0px !important;' data-position="fixed" data-role="header">
 	<a href="#left-panel" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false"><img class="imgbt" src="menu.png"></a>
-		<h1 style="font-family: 'Raleway', sans-serif;font-size:23px;padding:0.35em 0 !important;">PassionDécor</h1>
-<a href="#" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false">
-		<img style="float:right;" class="imgbt" src="profile.png">
+		<h1 style="font-size:23px;padding:0.35em 0 !important;">PassionDécor</h1>
+<div style="float:right;margin-top:-43px;">
+		<a href="#page2" data-transition="slide" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false">
+		<img onclick="load_home('https://passiondecor.net/connexion?back=my-account')" style="float:right;margin-right:10px;" class="imgbt" src="profile.png">
 		</a>
-	</div><!-- /header -->
+		<a href="#page2" data-transition="slide" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false">
+		<img onclick="load_home('https://passiondecor.net/commande')" style="float:right;margin-right:20px;" class="imgbt" src="buy.png">
+		</a>
+	
+	</div>	</div><!-- /header -->
 	
 				<div id="setcacont" style="position:absolute;width:100%;height:100%;left:0;right:0;margin-left:auto;margin-right:auto;color:gray;font-size:15px;text-align:center;">
+
+<div style="float:left;width:100%;">
+				<div id="bloc0">
+<img src="cash.png"><br/>
+<strong>Paiement Sécurisé</strong>
+</div>
+
+<div id="bloc0">
+<img src="del.png"><br/>
+<strong>Livraison Rapide</strong>
+</div>
+
+<div id="bloc0" >
+<img src="pig.png"><br/>
+<strong>Economie</strong>
+</div></div>
 				<div id="bloc1" style="float:left;width:98%;margin:1%;">
 
 </div>
@@ -411,7 +418,16 @@ alert("c phonegap");
 <div data-role="page" style="background-color:white;" id="page2">
 <div  style='padding:10px 0px !important;' data-position="fixed" data-role="header">
 <a data-transition="slide" data-direction="reverse" href="#page1" data-theme="d"  data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false"><img class="imgbt" style="vertical-align: middle;width: 24px !important;color: white;margin-top: 7px !important;" src="retour.png"> <span style="font-size: 16px;color: white;vertical-align:-5px;">Retour</span></a>
-<h1 style="font-family: 'Baloo Bhai', cursive !important;font-size:23px;padding:0.35em 0 !important;">Passiondecor</h1>
+<h1 style="font-size:23px;padding:0.35em 0 !important;">PassionDécor</h1>
+<div style="float:right;margin-top:-43px;">
+		<a href="#page2" data-transition="slide" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false">
+		<img onclick="load_home('https://passiondecor.net/connexion?back=my-account')" style="float:right;margin-right:10px;" class="imgbt" src="profile.png">
+		</a>
+		<a href="#page2" data-transition="slide" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false">
+		<img onclick="load_home('https://passiondecor.net/commande')" style="float:right;margin-right:20px;" class="imgbt" src="buy.png">
+		</a>
+	
+	</div>
 </div>
 
 <div id="mapage" style="position:absolute;width:100%;height:100%;left:0;right:0;margin-left:auto;margin-right:auto;color:gray;font-size:15px;text-align:center;">
