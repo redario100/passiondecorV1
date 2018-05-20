@@ -4,9 +4,9 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.passiondecor.net"
-        version   = "3.0.0">
+        version   = "4.0.0">
 
-    <name>Passiondecor2</name>
+    <name>Passiondecor</name>
 
     <description>
      Passiondecor
@@ -139,7 +139,7 @@
 	
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-    <string>300</string>
+    <string>400</string>
     </gap:config-file>
 
 	
