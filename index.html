@@ -96,6 +96,10 @@ box-shadow:0 0 0.4em grey !important;
 <script src="./cordova.js" onload="javascript:window.isCordovaApp = true;"></script>
 
 	<script>
+	
+	function load_home() {
+     document.getElementById("mapage").innerHTML='<object style="width:100%;height:100%;" type="text/html" data="https://passiondecor.net/fr/n%C5%93ud-de-chaise-63" ></object>';
+}
 	   function bloc1()
 {
  $.ajax({
@@ -337,12 +341,12 @@ alert("c phonegap");
 </script>
 </head>
 <body onload="bloc1();bloc2();bloc3();bloc4();bloc5();bloc6();isPhoneGap();">
-<div id="page1"  data-role="page">
+<div data-role="page" style="background-color:white;" id="page1">
 <div data-role="panel" style="box-shadow: 4px 0px -5px 2em grey !important;z-index:9995;" id="left-panel"  data-display="overlay" data-position-fixed="true" > <!--data-display="overlay"-->
 <ul data-role="listview" class="ui-listview">
 <li data-role="list-divider" role="heading" class="menuleft ui-li ui-li-divider ui-bar-d ui-first-child">Menu</li>
-					<a data-transition="slide"  href="#"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Housse de chaise</div></div></li></a>
-					<a data-transition="slide" href="https://passiondecor.net/fr/n%C5%93ud-de-chaise-63"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Noeud de chaise</div></div></li></a>
+					<a data-transition="slide"  href="#"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div  class="ui-btn-inner ui-li"><div class="ui-btn-text">Housse de chaise</div></div></li></a>
+					<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home()" class="ui-btn-inner ui-li"><div class="ui-btn-text">Noeud de chaise</div></div></li></a>
 				    <a data-transition="slide" href="https://passiondecor.net/fr/chemin-de-table-46"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Chemin de table</div></div></li></a>
 				    <a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Nappe pas cher</div></div></li></a>
 				    <a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Serviette de table</div></div></li></a>
@@ -379,7 +383,7 @@ alert("c phonegap");
 	</div><!-- /header -->
 	
 				<div id="setcacont" style="position:absolute;width:100%;height:100%;left:0;right:0;margin-left:auto;margin-right:auto;color:gray;font-size:15px;text-align:center;">
-<div id="bloc0" style="float:left;width:98%;margin:1%;">
+<div id="bloc0" style="float:left;width:100%;height:300px">
 
 </div>
 				<div id="bloc1" style="float:left;width:98%;margin:1%;">
@@ -406,8 +410,17 @@ alert("c phonegap");
 </div>
 
 			</div>
-</div> 
+ </div>
+<div data-role="page" style="background-color:white;" id="page2">
+<div  style='padding:10px 0px !important;' data-position="fixed" data-role="header">
+<a data-transition="slide" data-direction="reverse" href="#page1" data-theme="d"  data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false"><img class="imgbt" style="vertical-align: middle;width: 24px !important;color: white;margin-top: 7px !important;" src="retour.png"> <span style="font-size: 16px;color: white;vertical-align:-5px;">Retour</span></a>
+<h1 style="font-family: 'Baloo Bhai', cursive !important;font-size:23px;padding:0.35em 0 !important;">Passiondecor</h1>
+</div>
 
+<div id="mapage" style="position:absolute;width:100%;height:100%;left:0;right:0;margin-left:auto;margin-right:auto;color:gray;font-size:15px;text-align:center;">
+
+</div>
+</div>
 
 </body>
 </html>
