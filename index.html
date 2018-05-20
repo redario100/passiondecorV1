@@ -104,7 +104,7 @@ box-shadow:0 0 0.4em grey !important;
 	function load_home(url) {
 	$('#bg1').show();
 	$('#loader1').show();
-	document.getElementById("mapage").innerHTML='<object onclick="alert("reda")" style="width:100%;height:100%;" type="text/html" data="'+url+'" ></object>';
+	document.getElementById("mapage").innerHTML='<object style="width:100%;height:100%;" type="text/html" data="'+url+'" ></object>';
 
 	setTimeout(function(){ 
 	$('#bg1').hide();
@@ -325,7 +325,7 @@ $('#bloc7').html('');
 </script>
 </head>
 <body onload="bloc1();bloc2();bloc3();bloc4();bloc5();bloc6();">
-<div id="bg1" style="background:#f9f9f9c9;position:absolute;width:100%;height:100%;z-index:9990;display:none;" ></div>
+<div id="bg1" style="background:#ffffffb8;position:absolute;width:100%;top:0px;height:100%;z-index:9990;display:none;" ></div>
 <img id="loader1" style="display:none;width:50px;z-index:9991;position:absolute;left:0;right:0;margin-left:auto;margin-right:auto;top:48%;" src="load.gif">
 <div data-role="page" style="background-color:white;" id="page1">
 <div data-role="panel" style="box-shadow: 4px 0px -5px 2em grey !important;z-index:9995;" id="left-panel"  data-display="overlay" data-position-fixed="true" > <!--data-display="overlay"-->
@@ -377,17 +377,17 @@ $('#bloc7').html('');
 
 <div style="float:left;width:100%;">
 				<div id="bloc0">
-<img src="cash.png"><br/>
-<strong>Paiement Sécurisé</strong>
+<img style="width:50%" src="cash.png"><br/>
+<strong>Sécurité</strong>
 </div>
 
 <div id="bloc0">
-<img src="del.png"><br/>
+<img style="width:50%" src="del.png"><br/>
 <strong>Livraison Rapide</strong>
 </div>
 
 <div id="bloc0" >
-<img src="pig.png"><br/>
+<img style="width:50%" src="pig.png"><br/>
 <strong>Economie</strong>
 </div></div>
 				<div id="bloc1" style="float:left;width:98%;margin:1%;">
