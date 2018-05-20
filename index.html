@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fly View</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <style>
+
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Exo 2 Light'), local('Exo2-Light'), url(ert.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+.btnext
+{
+    width: 21px;
+    float: left;
+    padding: 10px;
+    margin-left: 13px;
+    border-radius: 59px;
+    background: #f7f5f5;
+}
+
+.montitre {
+    color: white;
+    padding: 0.8em 6%;
+	background:#c02e7da8;
+    text-align: left;
+    font-size: 1.9em;
+    margin-top: -70px;
+    width: 86%;
+    position: absolute;
+    z-index: 200;
+}
+
+
+.montitre2 {
+    color: white;
+    padding: 0.8em 6%;
+
+    text-align: left;
+    /* position: absolute; */
+    font-size: 1.9em;
+    margin-top: -70px;
+    width: 86%;
+    position: absolute;
+    z-index: 9999999;
+}
+
+.btnext2
+{
+transition:0.3s;
+transform:scale(1.1);
+background:silver;
+box-shadow:0 0 0.4em grey !important;
+}
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Exo 2 Light'), local('Exo2-Light'), url(gft.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Exo 2 Light'), local('Exo2-Light'), url(mima.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+1000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+#setcacont, html, body, div {
+	-webkit-overflow-scrolling: touch; 
+}
+
+#navbar {
+    
+	 position:fixed !important;
+	 margin: 0;
+  top: 0;
+  left: 0;
+}
+</style>
+<link rel="stylesheet" href="./jquery.mobile-1.4.5.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Courgette|Jaldi" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="flaticon.css"> 
+<link rel="stylesheet" href="verte.min.css" />
+<link rel="stylesheet" href="flycss.css" />
+<script src="./jquery-1.11.1.min.js"></script>
+<script src="./jquery.mobile-1.4.5.min.js"></script>
+
+	<script>
+	   function bloc1()
+{
+ $.ajax({
+         data: "bloc1=ok",
+         type: "get",
+         url: "http://labseo.net/app-pa/requete/action.php",
+		
+   beforeSend: function()
+    {
+$('#bloc1').html('<img style="width:50px;" src="load.gif">');
+    },
+    success: function(data)
+    {
+		$('#bloc1').hide();
+        $('#bloc1').html(data);
+		setTimeout(function(){ 
+		$('#bloc1').fadeIn();
+		}, 1000);
+		
+    },
+    error: function()
+    {
+        $('#bloc1').html('error');
+    }
+});
+  
+	  
+	   }
+	   
+	   
+	   	   function bloc2()
+{
+ $.ajax({
+         data: "bloc2=ok",
+         type: "get",
+         url: "http://labseo.net/app-pa/requete/action.php",
+		
+   beforeSend: function()
+    {
+$('#bloc2').html('');
+    },
+    success: function(data)
+    {
+		$('#bloc2').hide();
+        $('#bloc2').html(data);
+			setTimeout(function(){ 
+		$('#bloc2').fadeIn();
+		}, 1000);
+		
+    },
+    error: function()
+    {
+        $('#bloc2').html('error');
+    }
+});
+  
+	  
+	   }
+	   
+	   	   function bloc3()
+{
+ $.ajax({
+         data: "bloc3=ok",
+         type: "get",
+         url: "http://labseo.net/app-pa/requete/action.php",
+		
+   beforeSend: function()
+    {
+$('#bloc3').html('');
+    },
+    success: function(data)
+    {
+		$('#bloc3').hide();
+        $('#bloc3').html(data);
+		setTimeout(function(){ 
+		$('#bloc3').fadeIn();
+		}, 1000);
+		
+    },
+    error: function()
+    {
+        $('#bloc3').html('error');
+    }
+});
+  
+	  
+	   }
+	   
+	   	   function bloc4()
+{
+ $.ajax({
+         data: "bloc4=ok",
+         type: "get",
+         url: "http://labseo.net/app-pa/requete/action.php",
+		
+   beforeSend: function()
+    {
+$('#bloc4').html('');
+    },
+    success: function(data)
+    {
+		$('#bloc4').hide();
+        $('#bloc4').html(data);
+		setTimeout(function(){ 
+		$('#bloc4').fadeIn();
+		}, 1000);
+		
+    },
+    error: function()
+    {
+        $('#bloc4').html('error');
+    }
+});
+  
+	  
+	   }
+	   
+	   
+	   	   function bloc5()
+{
+ $.ajax({
+         data: "bloc5=ok",
+         type: "get",
+         url: "http://labseo.net/app-pa/requete/action.php",
+		
+   beforeSend: function()
+    {
+$('#bloc5').html('');
+    },
+    success: function(data)
+    {
+		$('#bloc5').hide();
+        $('#bloc5').html(data);
+			setTimeout(function(){ 
+		$('#bloc5').fadeIn();
+		}, 1000);
+		
+    },
+    error: function()
+    {
+        $('#bloc5').html('error');
+    }
+});
+  
+	  
+	   }
+	   
+	   
+	   	   function bloc6()
+{
+ $.ajax({
+         data: "bloc6=ok",
+         type: "get",
+         url: "http://labseo.net/app-pa/requete/action.php",
+		
+   beforeSend: function()
+    {
+$('#bloc6').html('');
+    },
+    success: function(data)
+    {
+		$('#bloc6').hide();
+        $('#bloc6').html(data);
+		setTimeout(function(){ 
+		$('#bloc6').fadeIn();
+		}, 1000);
+		
+    },
+    error: function()
+    {
+        $('#bloc6').html('error');
+    }
+});
+  
+	  
+	   }
+	   
+	    function bloc0()
+		{
+
+
+		}
+	   	   function bloc7()
+{
+ $.ajax({
+         data: "bloc7=ok",
+         type: "get",
+         url: "http://labseo.net/app-pa/requete/action.php",
+		
+   beforeSend: function()
+    {
+$('#bloc7').html('');
+    },
+    success: function(data)
+    {
+		$('#bloc7').hide();
+        $('#bloc7').html(data);
+				setTimeout(function(){ 
+		$('#bloc7').fadeIn();
+		}, 1000);
+		
+    },
+    error: function()
+    {
+        $('#bloc7').html('error');
+    }
+});
+  
+	  
+	   }
+	   
+	   
+	   $( document ).ready(function() {
+function isPhoneGap() {
+    return (window.cordova || window.PhoneGap || window.phonegap) 
+    && /^file:\/{3}[^\/]/i.test(window.location.href) 
+    && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
+}
+
+if ( isPhoneGap() ) {
+    alert("Running on PhoneGap!");
+} else {
+    alert("Not running on PhoneGap!");
+}
+  });
+</script>
+</head>
+<body onload="bloc1();bloc2();bloc3();bloc4();bloc5();bloc6();bloc0()">
+<div id="page1"  data-role="page">
+<div data-role="panel" style="box-shadow: 4px 0px -5px 2em grey !important;z-index:9995;" id="left-panel"  data-display="overlay" data-position-fixed="true" > <!--data-display="overlay"-->
+<ul data-role="listview" class="ui-listview">
+<li data-role="list-divider" role="heading" class="menuleft ui-li ui-li-divider ui-bar-d ui-first-child">Menu</li>
+					<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Housse de chaise</div></div></li></a>
+					<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Noeud de chaise</div></div></li></a>
+				    <a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Chemin de table</div></div></li></a>
+				    <a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Nappe pas cher</div></div></li></a>
+				    <a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Serviette de table</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Vase Martini</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Vase Alu</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Verrerie</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Accessoire de décoration</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Boule de Fleurs</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Fleur artificielle</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Plume</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Projecteur & Led</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Chandelier & Lanterne</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Arbre Artificiel</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Colonne Diamant</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Présentoir Gâteaux</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Table de Réception</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Tapis de Cérémonie</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Allée Centrale</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Rideau & Voilage</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Mur Floral</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Trône & Coin Mariés</div></div></li></a>
+				<a data-transition="slide" href="#leviers"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">Rideau Led & Voilage</div></div></li></a>
+		</ul>   
+
+
+   </div>    
+
+	<div id="navbar" style='padding:10px 0px !important;' data-position="fixed" data-role="header">
+	<a href="#left-panel" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false"><img class="imgbt" src="menu.png"></a>
+		<h1 style="font-family: 'Raleway', sans-serif;font-size:23px;padding:0.35em 0 !important;">PassionDécor</h1>
+<a href="#" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false">
+		<img style="float:right;" class="imgbt" src="profile.png">
+		</a>
+	</div><!-- /header -->
+	
+				<div id="setcacont" style="position:absolute;width:100%;height:100%;left:0;right:0;margin-left:auto;margin-right:auto;color:gray;font-size:15px;text-align:center;">
+<div id="bloc0" style="float:left;width:98%;margin:1%;">
+
+</div>
+				<div id="bloc1" style="float:left;width:98%;margin:1%;">
+
+</div>
+<div id="bloc2" style="float:left;width:98%;margin:1%;display:block !important">
+</div>
+
+<div id="bloc3" style="float:left;width:98%;margin:1%;display:block !important">
+
+</div>
+	
+<div id="bloc4" style="float:left;width:98%;margin:1%;display:block !important">
+
+</div>
+<div id="bloc5" style="float:left;width:98%;margin:1%;display:block !important">
+
+</div>	
+
+<div id="bloc6" style="float:left;width:98%;margin:1%;display:block !important">
+</div>
+
+<div id="bloc7" style="float:left;width:98%;margin:1%;display:block !important">
+</div>
+
+			</div>
+</div> 
+
+
+</body>
+</html>

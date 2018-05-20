@@ -1,0 +1,558 @@
+<html>
+<head>
+<title>Reclami</title>
+<meta charset="utf-8" />
+<style>
+@import url('https://fonts.googleapis.com/css?family=Ruluko');
+</style>
+<link rel="stylesheet" media="screen" type="text/css" href="css/style.css"/>
+
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSwipe.js"></script>
+<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+
+<script>
+function opp(s)
+{
+window.HTMLOUT.ouv(3);
+$('#boba').removeClass("logow2");
+$('#boba').addClass("logow");
+$('#pop').removeClass("pos2");
+$('#pop').addClass("pos");
+$('#loadert').show();
+  
+setTimeout(function(){
+      $.ajax({
+   type: "GET",
+   url: s,
+   success: function(msg){
+   document.location.href=s;
+
+    e.preventDefault();
+   },
+   error: function() { 
+  $('#loadert').hide();
+  
+   window.HTMLOUT.msgerreur();
+   
+   }
+   
+   
+ });
+	 
+  
+}, 800);
+}
+
+function rek(k)
+{
+
+if (k=='logow')
+{
+window.HTMLOUT.ouv(3);
+$('#boba').removeClass("logow");
+$('#boba').addClass("logow2");
+$('#pop').removeClass("pos");
+$('#pop').addClass("pos2");
+}
+else
+{
+
+$('#boba').removeClass("logow2");
+$('#boba').addClass("logow");
+$('#pop').removeClass("pos2");
+$('#pop').addClass("pos");
+}
+}
+
+function verifier()
+{
+   var k=document.getElementById("plus").value;
+	   document.getElementById("plus").value=parseInt(k)+1;
+}
+
+
+var myVar;
+
+function stop2(j)
+{
+var test = document.getElementById("manote");
+var testClass = test.className;
+if (testClass == 'note' && j=="note")
+{
+var jj=document.getElementById("tom").value;
+if (jj =="1")
+{
+return false;
+}
+else
+{
+$("#manote").removeClass("note");
+$("#manote").addClass("note2");
+setTimeout(function(){
+document.getElementById("tom").value='2';
+$("#manote").removeClass("note2");
+$("#manote").addClass("note");
+
+window.HTMLOUT.completer2();
+}, 300);
+}
+}
+
+}
+
+
+function stop(counter,j)
+{
+document.getElementById("tom").value='1';
+var test = document.getElementById("record");
+var testClass = test.className;
+if (testClass == 'mic' && j=="mic")
+{
+if(counter < 61){
+$("#record").removeClass("mic");
+$("#record").addClass("mic2");
+    myVar = setTimeout(function(){
+      counter++;
+	  var l=document.getElementById("charge").offsetWidth+3;
+	  document.getElementById("charge").style.width=(l+"px");
+	   if (counter == 1)
+	  {
+	  $("#tt").show();
+	   window.HTMLOUT.ecouter();
+	   var k=document.getElementById("plus").value;
+	   document.getElementById("plus").value=parseInt(k)+1;
+	   
+	  }
+	  else if (counter <= 9)
+	  {
+	  $("#conteur").html("00:0"+counter);
+	  }
+	  else if (counter > 9 && counter < 60)
+	  {
+	   $("#conteur").html("00:"+counter);
+	  }
+	  else
+	  {
+	  lm=(counter-60)+1;
+	  if (lm <= 9)
+	  {
+	  $("#conteur").html("01:0"+lm);
+	  }
+	  else if (lm > 9)
+	  {
+	   $("#conteur").html("01:"+lm);
+	  }
+	
+	  }
+	  $("#record").removeClass("mic2");
+$("#record").addClass("mic");
+      stop(counter,'mic');
+	
+    }, 1000);
+
+
+  }
+  else
+  {
+ 
+$("#record").removeClass("mic2");
+$("#record").addClass("mic");
+clearTimeout(myVar);
+$("#conteur").html("00:00");
+
+document.getElementById("charge").style.width=("0px");
+
+window.HTMLOUT.stop();
+
+  }
+  
+  
+ }
+ 
+ else if (testClass == 'mic2' && j=="mic2")
+ {
+$("#record").removeClass("mic2");
+$("#record").addClass("mic");
+clearTimeout(myVar);
+$("#conteur").html("00:00");
+ document.getElementById("tom").value='0';
+document.getElementById("charge").style.width=("0px");
+window.HTMLOUT.stop();
+ }
+}
+
+
+function envoyer()
+{
+window.HTMLOUT.envoyerauserveur();
+}
+function tons()
+{
+var k=window.HTMLOUT.tons();
+alert(k);
+}
+
+function play()
+{
+window.HTMLOUT.play();
+}
+
+function retour()
+{
+var r=document.URL;
+var u=document.getElementById("coucou").value;
+if ((r=='http://aldomania.net/reclamation/liste.html' || r=='http://www.aldomania.net/reclamation/liste.html' || r=='liste.html') && u=='1')
+{
+	 $("#resultataffiche").removeClass("resultataffiche2");
+					$("#resultataffiche").addClass("resultataffiche");
+					
+					setTimeout(function(){
+					$("#resultataffiche").html();
+$("#resultataffiche").hide();
+$(".panneau").fadeOut();
+document.getElementById("coucou").value='0';
+window.HTMLOUT.ouv(3);
+}, 300);
+}
+
+else
+{
+window.HTMLOUT.pageretour();
+}
+}
+
+
+
+function ouverture()
+{
+window.HTMLOUT.ouv(1);
+}
+
+ $(document).ready(function() {
+ 	//window.HTMLOUT.ouv(3);
+	
+$('body').show();
+
+$('#loadert').show();
+setTimeout(function(){
+$('#loadert').hide();
+$('#container').fadeIn();
+}, 600);
+
+var catego=localStorage.getItem("cati");
+
+if (catego=='Enseignement')
+{
+$('#papa').html('<div class="pipi"><img class="imgpipi" src="./images/book.png"> Enseignement</div><div class="contenupipi">Le système d\'enseignement vous déplait. Vous avez été confronté a une situation injuste dans votre établissement.</div>');
+}
+
+else if (catego=='Emploi')
+{
+$('#papa').html('<div class="pipi"><img class="imgpipi" src="./images/businessman.png"> Emploi</div><div class="contenupipi">Vous avez un problème dans votre milieu de travail ou entreprise: conditions de travail ou d\'embauche, discrimination professionnelle, abus d\'un employeur, Fraudes.</div>');
+}
+
+else if (catego=='Sante')
+{
+$('#papa').html('<div class="pipi"><img class="imgpipi" src="./images/hospital.png"> Santé</div><div class="contenupipi">Vous avez vécu une mauvaise expérience lorsque vous êtes tombé malade; disponibilité des médicaments, l\'infrastructure d\'un hôpital, ses services, ses fonctionnaires ou l\'intervention d\'un médecin ou spécialiste vous déplait.</div>');
+}
+
+else if (catego=='Media')
+{
+$('#papa').html('<div class="pipi"><img class="imgpipi" src="./images/television.png"> Médias</div><div class="contenupipi">La qualité des programmes diffusés par les chaînes de télévision ou radio vous déplaît. Une ou plusieurs émissions produites par les médias ne vous convient pas.</div>');
+}
+
+else if (catego=='Infrastructures')
+{
+$('#papa').html('<div class="pipi"><img class="imgpipi" src="./images/route.png"> Infrastructures</div><div class="contenupipi">Vous avez remarqué une anomalie sur une voie: trou(ni de poule), chaussée en mauvaise état, un élément qui bloque la circulation, manque de signalisations.</div>');
+}
+
+else if (catego=='Services Publics')
+{
+$('#papa').html('<div class="pipi"><img class="imgpipi" src="./images/service.png"> Services Publics</div><div class="contenupipi">Vous avez été confronté à une injustice auprès de l\'administration marocaine. Les services publics proposés ne sont pas à la hauteur de ce que vous recherchez.</div>');
+}
+
+else if (catego=='Sport')
+{
+$('#papa').html('<div class="pipi"><img class="imgpipi" src="./images/football.png"> Sport</div><div class="contenupipi">L\'état d\'un sport national vous déplaît. Vous avez un message à faire passer à une équipe, un entraîneur ou un sportif.</div>');
+}
+
+else if (catego=='Environement')
+{
+$('#papa').html('<div class="pipi"><img class="imgpipi" src="./images/sprout.png"> Environement</div><div class="contenupipi">La pollution dans votre ville ou région vous dérange. Vous remarquez des déchets dans un endroit public. Le traitement des ordures n\'est pas conforme aux normes d\'hygiène.</div>');
+}
+
+else if (catego=='Securite')
+{
+$('#papa').html('<div class="pipi"><img class="imgpipi" src="./images/burglar.png"> Sécurité</div><div class="contenupipi">Vous avez été agressé. vous connaissez l\'identité d\'un voleur. vous souhaitez signaler un endroit non sécurisé.</div>');
+}
+
+else if (catego=='aide')
+{
+$('#papa').html('<div class="pipi"><img class="imgpipi" src="./images/hand.png"> Aidez-moi</div><div class="contenupipi">Vous avez besoin d\'aide (conseil, don, secours, coup de main). N\'hésitez pas!</div>');
+}
+
+else if (catego=='propositions')
+{
+$('#papa').html('<div class="pipi"><img class="imgpipi" src="./images/ideas.png"> Propositions</div><div class="contenupipi">Vous avez des idées & propositions qui pourraient faire évoluer notre société, des solutions à des problèmes d\'ordre économique, politique ou social.</div>');
+}
+
+
+var hr = new XMLHttpRequest();
+  // Create some variables we need to send to our PHP file
+  var url = "http://aldomania.net/reclamation/requete.php";
+  var g=window.HTMLOUT.getmac();
+  var vars = "getnotif="+g;
+  hr.open("POST", url, true);
+  hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  // Access the onreadystatechange event for the XMLHttpRequest object
+  hr.onreadystatechange = function() {
+    if(hr.readyState == 4 && hr.status == 200) { 
+	
+               var return_data = hr.responseText;
+			   if(return_data !='0')
+			   {
+$('.affichenot').show();
+			   $('.affichenot').html(return_data);
+			   
+			   }
+			   else
+			   {
+			    $('.affichenot').html();
+			   $('.affichenot').hide();
+			   }
+			   
+
+        }
+		
+     
+    }
+  
+  // Send the data to PHP now... and wait for response to update the status div
+  hr.send(vars); // Actually execute the request
+  //document.getElementById("status").innerHTML = "processing...";
+var hra = new XMLHttpRequest();
+  // Create some variables we need to send to our PHP file
+  var urla = "http://aldomania.net/reclamation/requete.php";
+  var ga=window.HTMLOUT.getmac();
+  if (localStorage.getItem("message") != 0)
+  {
+   var l=localStorage.getItem("message");
+   
+ localStorage.setItem("message", l);
+  }
+ else
+ {
+   localStorage.setItem("message", '0');
+ }
+  var varsa = "getmessage=ok";
+  hra.open("POST", urla, true);
+  hra.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  // Access the onreadystatechange event for the XMLHttpRequest object
+  hra.onreadystatechange = function() {
+    if(hra.readyState == 4 && hra.status == 200) { 
+	
+               var return_dataa = hra.responseText;
+			   
+			   var hu=localStorage.getItem("message");
+			   if(return_dataa !='0' && return_dataa > hu && return_dataa != hu )
+			   {
+var r=parseInt(return_dataa)-parseInt(hu);
+			   $('.affichenot2').html(r);
+			   localStorage.setItem("message2", return_dataa);
+			   $('.affichenot2').fadeIn();
+			   }
+			   
+			  else if(return_dataa =='0' || hu > return_dataa)
+			   {
+			   
+			   	    $('.affichenot2').html();
+			   $('.affichenot2').hide(); 
+			   localStorage.setItem("message2", '0');localStorage.setItem("message", '0');
+			
+			   }
+			   else
+			   {
+			    $('.affichenot2').html();
+			   $('.affichenot2').hide();
+			   }
+			   
+
+        }
+		
+     
+    }
+  
+  // Send the data to PHP now... and wait for response to update the status div
+  hra.send(varsa); // Actually execute the request
+  //document.getElementById("status").innerHTML = "processing...";
+  return false;
+  
+  
+  $('a').click(function(e){
+    window.goto=$(this).attr("href");
+
+      document.location.href=window.goto;
+
+
+    e.preventDefault();
+  });
+     
+	
+    });
+	
+	
+function opp3(s)
+{
+	$('#loadert').show();
+	      $('#pop').removeClass("pos2");
+$('#pop').addClass("pos");
+$('#boba').removeClass("logow2");
+$('#boba').addClass("logow");
+  localStorage.setItem('setlang', 'de');
+   var v=localStorage.getItem("setlang");
+   window.HTMLOUT.setlangue(v);
+
+   document.location.href='index-ar.html';
+$('#loadert').hide();
+ 
+}
+</script>
+
+	<script>
+			/*
+				VIEWPORT BUG FIX
+				iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton
+			*/
+			(function(doc){var addEvent='addEventListener',type='gesturestart',qsa='querySelectorAll',scales=[1,1],meta=qsa in doc?doc[qsa]('meta[name=viewport]'):[];function fix(){meta.content='width=device-width,minimum-scale='+scales[0]+',maximum-scale='+scales[1];doc.removeEventListener(type,fix,true);}if((meta=meta[meta.length-1])&&addEvent in doc){fix();scales=[.25,1.6];doc[addEvent](type,fix,true);}}(document));
+		</script>
+		
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+</head>
+<input type="hidden" id="plus" value="0">
+<input type="hidden" id="tom" value="0">
+<body style="background:white;display:none;">
+<div id="bibi1" style="display:none;position:fixed;background-color:rgba(51, 50, 50, 0.53);background:rgba(51, 50, 50, 0.53);width:100%;height:100%;z-index:350;"></div>
+<div id="bibi2" style="display:none;z-index:351;position:absolute;margin-top:48%;padding:20px;background-color:white;color:gray;font-size:16px;width:280px;left:0;right:0;margin-left:auto;margin-right:auto;border-radius:3px;box-shadow:0 0 0.5em gray;">
+Vous avez le droit a 3 r&eacute;clamations par jour, vous pouvez ajouter d'autres r&eacute;clamation demain. Merci.<br/>
+<div class="hoverbtn" onclick="$('#bibi1').fadeOut();$('#bibi2').hide();" style="float:right;margin-top:20px;padding:10px 20px;color:gray;font-size:17px;">Ok</div>
+</div>
+
+<div id="pop" class="pos" >
+<div onclick="ouverture();opp('mesreclam.html')" style="margin-top:58px;" class="menuoption">
+<img src="images/reclam1.png" class="imgmenu"><div class="txtmenu">Mes R&eacute;clamtions</div>
+</div>
+<div onclick="ouverture();opp('index.html')" class="menuoption">
+<img src="images/reclam2.png" class="imgmenu"><div class="txtmenu">Je R&eacute;clame</div>
+</div>
+
+<div onclick="ouverture();opp('liste.html')" class="menuoption">
+<img src="images/ecouter2.png" class="imgmenu"><div class="txtmenu">Consulter R&eacute;clamations</div>
+</div>
+
+<div onclick="ouverture();opp('notification.html')" class="menuoption">
+<img src="images/alarm.png" class="imgmenu"><div class="txtmenu">Notifications</div>
+</div>
+
+<div onclick="ouverture();opp('messageap.html')" class="menuoption">
+<img src="images/message2.png" class="imgmenu"><div class="txtmenu">Messages</div>
+</div>
+
+<div onclick="ouverture();opp('conditions.html')" class="menuoption">
+<img src="images/notepad.png" class="imgmenu"><div class="txtmenu">Conditions d'utilisation</div>
+</div>
+
+<div onclick="ouverture();opp('apropos.html')" class="menuoption">
+<img src="images/information.png" class="imgmenu"><div class="txtmenu">A Propos</div>
+</div>
+
+
+<div onclick="ouverture();opp('Contact.html')" class="menuoption">
+<img src="images/mess.png" class="imgmenu"><div class="txtmenu">Contact</div>
+</div>
+
+
+<div onclick="opp3('de')" class="menuoption">
+<img src="./images/switch.png" class="imgmenu"><div class="txtmenu">Utiliser en Arabe</div>
+</div>
+
+
+    </div>
+			<img id="loadert" class="loaderia" src="images/ring-alt.gif">
+	        <div  class="wrap push">
+<input type="hidden" id="coucou" value="0">
+<div style="box-shadow:0 0 0.5em #19100f;" id="nav">
+<img id="boba" class="logow" onclick="rek($(this).attr('class'))" src="images/logo.png">
+<img onclick="ouverture();opp('liste.html')" class="mn1" style="float:right;width:22px;padding:16px 12px;margin-right:8px;" src="images/ecouter.png">
+<img onclick="ouverture();opp('index.html')" class="mn1" style="float:right;width:22px;padding:16px 12px;"  src="images/reclam22.png">
+<div onclick="ouverture();opp('notification.html')" class="mn1" style="float:right;padding:16px 12px;">
+<div id="bir" class="affichenot"></div>
+<img style="width:22px;" src="images/notif.png"></div>
+
+<div onclick="ouverture();opp('messageap.html');localStorage.setItem('message', localStorage.getItem('message2'));" class="mn1" style="float:right;padding:16px 12px;">
+<div id="bir2" class="affichenot2"></div>
+<img style="width:22px;" src="images/message.png"></div>
+
+</div>
+<div style="display:none;position:fixed;background-color:white;width:100%;height:100%;background-size:cover;margin:0;" id="container">
+<div id="papa" >
+</div>
+<div class="positionall">
+<div style="color:gray;font-size:13px;font-weight:bold;" class="coco">
+<div style="float:left">
+<div style="margin-bottom:10px;" onclick="stop(0,document.getElementById('record').className);" id="record" class="mic">
+</div><br/>
+Réclamation<br/> Vocale
+</div>
+<div style="float:left">
+<div style="margin-bottom:10px;" onclick="stop2(document.getElementById('manote').className);" id="manote" class="note">
+</div><br/>
+Réclamation <br/>Ecrite
+</div>
+
+<div id="tt" style="display:none;" class="temps">
+<div id="charge" style="width:0px;" class="temps2">
+</div>
+<div id="conteur" class="endt">00:00</div>
+<button onclick="envoyer()">envoyer</button><button onclick="tons()">temps</button><button onclick="play()">play</button>
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+<script>
+	 $(function() {   
+ 
+      $("body").swipe( {
+              swipeRight:function(event, direction, distance, duration, fingerCount) {
+			  window.HTMLOUT.ouv(3);
+$('#pop').removeClass("pos");
+$('#pop').addClass("pos2");
+$('#boba').removeClass("logow");
+$('#boba').addClass("logow2");
+
+        },
+		
+		     swipeLeft:function(event, direction, distance, duration, fingerCount) {
+        
+      $('#pop').removeClass("pos2");
+$('#pop').addClass("pos");
+$('#boba').removeClass("logow2");
+$('#boba').addClass("logow");
+
+    
+    
+        },
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        threshold:1
+      });
+    });
+</script>
+</body>
+</html>
+
