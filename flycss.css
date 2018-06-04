@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+@font-face {
+    font-family: AlishaderDemo;
+    src: url(AlishaderDemo.ttf);
+}
+
 html {
 font-size:100%;
 white-space:normal!important
+}
+
+a.ui-link {
+    font-size: 1.1em;
 }
 
 input {
@@ -131,7 +140,7 @@ background:#f7f7f7!important
 }
 
 .menuleft {
-background:#464646!important;
+background:white!important;
 padding:20px 18px!important;
 font-size:18px!important;
 font-weight:700!important
@@ -445,11 +454,7 @@ background-size:2.875em 2.875em
 }
 
 .ui-bar-a,.ui-page-theme-a .ui-bar-inherit,html .ui-bar-a .ui-bar-inherit,html .ui-body-a .ui-bar-inherit,html body .ui-group-theme-a .ui-bar-inherit {
-background: #a8e000;
-    background: -moz-linear-gradient(to right,#ee8ab9 0%,#c75a9c 40%,#bc0f68 100%);
-    background: -webkit-linear-gradient(to right,#ee8ab9 0%,#c75a9c 40%,#bc0f68 100%);
-    background: linear-gradient(to right,#ee8ab9 0%,#c75a9c 40%,#bc0f68 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e63939',endColorstr='#c31b1b',GradientType=1);
+background: #f9f8f8;
     color: #fff;
     text-shadow: 0 0 0;
     font-weight: 700;
@@ -473,7 +478,7 @@ border-style:solid
 }
 
 .ui-body-a,.ui-page-theme-a .ui-body-inherit,html .ui-bar-a .ui-body-inherit,html .ui-body-a .ui-body-inherit,html body .ui-group-theme-a .ui-body-inherit,html .ui-panel-page-container-a {
-background-color:#fdfdfd;
+background-color:white;
 border-color:#ebeaea;
 color:#333;
 text-shadow:0 0 0 #fff
@@ -528,21 +533,19 @@ text-shadow:0 1px 0 #f3f3f3
 .ui-page-theme-a .ui-checkbox-on:after,html .ui-bar-a .ui-checkbox-on:after,html .ui-body-a .ui-checkbox-on:after,html body .ui-group-theme-a .ui-checkbox-on:after,.ui-btn.ui-checkbox-on.ui-btn-a:after,/* Active flipswitch background */
 .ui-page-theme-a .ui-flipswitch-active,html .ui-bar-a .ui-flipswitch-active,html .ui-body-a .ui-flipswitch-active,html body .ui-group-theme-a .ui-flipswitch-active,html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active,/* Active slider track */
 .ui-page-theme-a .ui-slider-track .ui-btn-active,html .ui-bar-a .ui-slider-track .ui-btn-active,html .ui-body-a .ui-slider-track .ui-btn-active,html body .ui-group-theme-a .ui-slider-track .ui-btn-active,html body div.ui-slider-track.ui-body-a .ui-btn-active {
-background-color:#65b95f;
+
 border-color:#4c8e48;
 color:#fff;
 text-shadow:0 0 0
 }
 
 .ui-page-theme-a .ui-radio-on:after,html .ui-bar-a .ui-radio-on:after,html .ui-body-a .ui-radio-on:after,html body .ui-group-theme-a .ui-radio-on:after,.ui-btn.ui-radio-on.ui-btn-a:after {
-border-color:#65b95f
+
 }
 
 .ui-page-theme-a .ui-btn:focus,html .ui-bar-a .ui-btn:focus,html .ui-body-a .ui-btn:focus,html body .ui-group-theme-a .ui-btn:focus,html head + body .ui-btn.ui-btn-a:focus,/* Focus buttons and text inputs with div wrap */
 .ui-page-theme-a .ui-focus,html .ui-bar-a .ui-focus,html .ui-body-a .ui-focus,html body .ui-group-theme-a .ui-focus,html head + body .ui-btn-a.ui-focus,html head + body .ui-body-a.ui-focus {
--webkit-box-shadow:0 0 12px #65b95f;
--moz-box-shadow:0 0 12px #65b95f;
-box-shadow:0 0 12px #65b95f
+
 }
 
 .ui-bar-b,.ui-page-theme-b .ui-bar-inherit,html .ui-bar-b .ui-bar-inherit,html .ui-body-b .ui-bar-inherit,html body .ui-group-theme-b .ui-bar-inherit {
@@ -773,28 +776,7 @@ font-size:20px
 font-family:'Jaldi',sans-serif
 }
 
-body {
-font-family:'Ruluko',sans-serif;
-padding:0;
-margin:0;
-color:#fff;
-outline:0 none!important;
-outline-style:none;
-display:block;
--moz-box-shadow:none;
--webkit-user-select:none;
--moz-user-select:none;
--ms-user-select:none;
-user-select:none;
--o-user-select:none;
--webkit-touch-callout:none;
--ms-user-select:none;
--khtml-user-select:none;
--webkit-tap-highlight-color:rgba(0,0,0,0);
--webkit-box-sizing:border-box;
--moz-box-sizing:border-box;
-box-sizing:border-box
-}
+
 
 
 
@@ -1308,27 +1290,49 @@ font-family:'Jaldi',sans-serif;
 cursor:pointer;
 }
 
-body {
-font-family:'Ruluko',sans-serif;
-padding:0;
-margin:0;
-color:#fff;
+
+.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
+    background: transparent;
+    box-shadow: none;
+}
+
+body, input[type="text"] {
+font-family:'Ruluko',sans-serif !important;
+padding:0 !important;
+margin:0 !important;
+color:#fff !important;
 outline:0 none!important;
-outline-style:none;
-display:block;
--moz-box-shadow:none;
--webkit-user-select:none;
--moz-user-select:none;
--ms-user-select:none;
-user-select:none;
--o-user-select:none;
--webkit-touch-callout:none;
--ms-user-select:none;
--khtml-user-select:none;
--webkit-tap-highlight-color:rgba(0,0,0,0);
--webkit-box-sizing:border-box;
--moz-box-sizing:border-box;
-box-sizing:border-box
+outline-style:none !important;
+display:block !important;
+-moz-box-shadow:none !important;
+-webkit-user-select:none !important;
+-moz-user-select:none !important;
+-ms-user-select:none !important;
+user-select:none !important;
+-o-user-select:none !important;
+-webkit-touch-callout:none !important;
+-ms-user-select:none !important;
+-khtml-user-select:none !important;
+-webkit-tap-highlight-color:rgba(0,0,0,0) !important;
+-webkit-box-sizing:border-box !important;
+-moz-box-sizing:border-box !important;
+box-sizing:border-box !important;
+box-shadow: inset 0px 0px 0px 0px white !important;
+-webkit-appearance: none !important;
+}
+
+input[type=text]#myInp {
+font-family: 'Josefin Sans', sans-serif;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: white;
+    color: grey !important;
+    background-image: url(https://www.w3schools.com/howto/searchicon.png);
+    background-position: 9px 8px;
+    background-repeat: no-repeat;
+    padding: 9px 20px 9px 40px !important;
+
 }
 
 ::-webkit-scrollbar {
@@ -1572,8 +1576,6 @@ text-align:center
 }
 
 button {
-display:none;
-appearance:none;
 margin:40px auto 0;
 padding:5px 40px;
 border:2px solid #fff;

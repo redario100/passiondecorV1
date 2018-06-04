@@ -6,6 +6,7 @@
 	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
  <style>
+
 html,body,li,a,h1,span, div
 {
 font-family: 'Josefin Sans', sans-serif;
@@ -26,6 +27,15 @@ margin:2%;
     margin-left: 13px;
     border-radius: 59px;
     background: #f7f5f5;
+}
+
+.imgmeni
+{
+	width: 28px;
+    float: right;
+    display: block;
+    vertical-align: middle;
+    margin-top: -25px;
 }
 
 .montitre {
@@ -78,6 +88,8 @@ box-shadow:0 0 0.4em grey !important;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+1000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
+
 #setcacont, html, body, div {
 	-webkit-overflow-scrolling: touch; 
 }
@@ -99,7 +111,15 @@ box-shadow:0 0 0.4em grey !important;
 <script src="./jquery.mobile-1.4.5.min.js"></script>
 <script src="./cordova.js" onload="javascript:window.isCordovaApp = true;"></script>
 
+
 	<script>
+	
+	
+	function bibi()
+	{
+	var k=$( "#myInp" ).val();
+	window.location.href = "https://passiondecor.net/module/categorysearch/catesearch?fc=module&module=categorysearch&controller=catesearch&orderby=position&orderway=desc&search_query="+k+"&search_category=all&submit_search=";
+	}
 	
 	function load_home(url) {
 	$('#bg1').show();
@@ -328,9 +348,20 @@ $('#bloc7').html('');
 <div id="bg1" style="background:#ffffffb8;position:absolute;width:100%;top:0px;height:100%;z-index:9990;display:none;" ></div>
 <img id="loader1" style="display:none;width:50px;z-index:9991;position:absolute;left:0;right:0;margin-left:auto;margin-right:auto;top:48%;" src="load.gif">
 <div data-role="page" style="background-color:white;" id="page1">
-<div data-role="panel" style="box-shadow: 4px 0px -5px 2em grey !important;z-index:9995;" id="left-panel"  data-display="overlay" data-position-fixed="true" > <!--data-display="overlay"-->
+<div data-role="panel" style="box-shadow: 4px 0px -5px 2em grey !important;z-index:10000;" id="left-panel"  data-display="overlay" data-position-fixed="true" > <!--data-display="overlay"-->
+<img src="logo1.png" style="width: 98%;margin-top: 45px;margin: 1px 0 0 2%;">
 <ul data-role="listview" class="ui-listview">
-<li data-role="list-divider" role="heading" class="menuleft ui-li ui-li-divider ui-bar-d ui-first-child">Menu</li>
+<li data-role="list-divider" style="font-family: AlishaderDemo;
+    color: #9e017f;
+    font-weight: normal !important;
+    font-size: 3em !important;
+    text-align: center;" role="heading" class="menuleft ui-li ui-li-divider ui-bar-d ui-first-child">Bonjour</li>
+	<a data-transition="slide"  href="#page1"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text" style="font-weight:bold">Accueil</div><img class="imgmeni" src="home.png"></div></li></a>
+	<a data-transition="slide"  href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/commande')" class="ui-btn-inner ui-li"><div class="ui-btn-text" style="font-weight:bold">Mes Commandes</div><img class="imgmeni" src="box.png"></div></li></a>
+	<a data-transition="slide"  href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/connexion?back=my-account')" class="ui-btn-inner ui-li"><div class="ui-btn-text" style="font-weight:bold">Mon Compte</div><img class="imgmeni" src="user.png"></div></li></a>
+	<a data-transition="slide"  href="#page1"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text" style="font-weight:bold">Parrainage</div><img class="imgmeni" src="handshake.png"></div></li></a>
+	<a data-transition="slide"  href="#page1"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text" style="font-weight:bold">Catalogue</div><img class="imgmeni" src="open-book.png"></div></li></a>
+					
 					<a data-transition="slide"  href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/housse-de-chaise-13')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Housse de chaise</div></div></li></a>
 					<a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/n%C5%93ud-de-chaise-63')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Noeud de chaise</div></div></li></a>
 				    <a data-transition="slide" href="#page2"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div onclick="load_home('https://passiondecor.net/fr/chemin-de-table-46')" class="ui-btn-inner ui-li"><div class="ui-btn-text">Chemin de table</div></div></li></a>
@@ -362,20 +393,22 @@ $('#bloc7').html('');
 
 	<div id="navbar" style='padding:10px 0px !important;' data-position="fixed" data-role="header">
 	<a href="#left-panel" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false"><img class="imgbt" src="menu.png"></a>
-		<h1 style="font-size:23px;padding:0.35em 0 !important;">PassionDécor</h1>
+		<h1><button onclick="bibi()" style="float: left;opacity: 0;">send</button><input type="text" id="myInp" style="border:1px solid silver;float: left;margin-top: -36px !important;" ></h1>
 <div style="float:right;margin-top:-43px;">
 		<a href="#page2" data-transition="slide" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false">
-		<img onclick="load_home('https://passiondecor.net/connexion?back=my-account')" style="float:right;margin-right:10px;" class="imgbt" src="profile.png">
-		</a>
-		<a href="#page2" data-transition="slide" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false">
-		<img onclick="load_home('https://passiondecor.net/commande')" style="float:right;margin-right:20px;" class="imgbt" src="buy.png">
+		<img onclick="load_home('https://passiondecor.net/commande')" style="float:right;margin-right:20px;" class="imgbt" src="shopping-cart.png">
 		</a>
 	
 	</div>	</div><!-- /header -->
 	
 				<div id="setcacont" style="position:absolute;width:100%;height:100%;left:0;right:0;margin-left:auto;margin-right:auto;color:gray;font-size:15px;text-align:center;">
-
-<div style="float:left;width:100%;">
+<div style="float:left;width:100%;background:#f9f8f8;color:#404040;height:50px;">
+<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/nouveaux-produits')" style="float:left;margin-right:1%;margin-left:1%;width:23%;color:#404040;padding: 18px 1px;">Nouveautés</div></a>
+<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/promotions')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;color:#404040;">Promotions</div></a>
+<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/meilleures-ventes')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;color:#404040;">Bestseller</div></a>
+<div onclick="load_home('#')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;color:#404040;" >Ventes Flash</div>
+</div>
+<!--<div style="float:left;width:100%;">
 				<div id="bloc0">
 <img style="width:50%" src="cash.png"><br/>
 <strong>Sécurité</strong>
@@ -389,7 +422,7 @@ $('#bloc7').html('');
 <div id="bloc0" >
 <img style="width:50%" src="pig.png"><br/>
 <strong>Economie</strong>
-</div></div>
+</div></div>-->
 				<div id="bloc1" style="float:left;width:98%;margin:1%;">
 
 </div>
@@ -416,21 +449,26 @@ $('#bloc7').html('');
 			</div>
  </div>
 <div data-role="page" style="background-color:white;" id="page2">
-<div  style='padding:10px 0px !important;' data-position="fixed" data-role="header">
-<a data-transition="slide" data-direction="reverse" href="#page1" data-theme="d"  data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false"><img class="imgbt" style="vertical-align: middle;width: 24px !important;color: white;margin-top: 7px !important;" src="retour.png"> <span style="font-size: 16px;color: white;vertical-align:-5px;">Retour</span></a>
-<h1 style="font-size:23px;padding:0.35em 0 !important;">PassionDécor</h1>
+
+	<div id="navbar" style='padding:10px 0px !important;' data-position="fixed" data-role="header">
+<a data-transition="slide" data-direction="reverse" href="#page1" data-theme="d"  data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false"><img class="imgbt" style="vertical-align: middle;width: 24px !important;color: white;margin-top: 7px !important;" src="back.png"> </a>
+<h1><button onclick="bibi()" style="float: left;opacity: 0;">send</button><input type="text" id="myInp" style="border:1px solid silver;float: left;margin-top: -36px !important;" ></h1>
 <div style="float:right;margin-top:-43px;">
 		<a href="#page2" data-transition="slide" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false">
-		<img onclick="load_home('https://passiondecor.net/connexion?back=my-account')" style="float:right;margin-right:10px;" class="imgbt" src="profile.png">
-		</a>
-		<a href="#page2" data-transition="slide" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false">
-		<img onclick="load_home('https://passiondecor.net/commande')" style="float:right;margin-right:20px;" class="imgbt" src="buy.png">
+		<img onclick="load_home('https://passiondecor.net/commande')" style="float:right;margin-right:20px;" class="imgbt" src="shopping-cart.png">
 		</a>
 	
-	</div>
+	</div>	</div>
+	
+	<div style="float:left;width:100%;background:#f9f8f8;color:#404040;height:50px;">
+<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/nouveaux-produits')" style="float:left;margin-right:1%;margin-left:1%;width:23%;text-align: center;color:#404040;padding: 18px 1px;">Nouveautés</div></a>
+<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/promotions')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;text-align: center;color:#404040;">Promotions</div></a>
+<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/meilleures-ventes')" style="float:left;margin-right:1%;width:23%;text-align: center;padding: 18px 1px;color:#404040;">Bestseller</div></a>
+<div onclick="load_home('#')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;color:#404040;text-align: center;" >Ventes Flash</div>
 </div>
 
-<div id="mapage" style="position:absolute;width:100%;height:100%;left:0;right:0;margin-left:auto;margin-right:auto;color:gray;font-size:15px;text-align:center;">
+
+<div id="mapage" style="margin-top: 51px;position:absolute;width:100%;height:100%;left:0;right:0;margin-left:auto;margin-right:auto;color:gray;font-size:15px;text-align:center;">
 
 </div>
 </div>
