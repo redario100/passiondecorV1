@@ -39,12 +39,12 @@ margin:2%;
 }
 
 .montitre {
-    color: white;
-    padding: 0.8em 6%;
-	background:#c02e7da8;
+	color: black;
+    padding: 5px 19px;
     text-align: left;
-    font-size: 1.9em;
-    margin-top: -73px;
+    font-size: 1.5em;
+    margin-top: -49px;
+    text-shadow: none !important;
     width: 86%;
     position: absolute;
     z-index: 200;
@@ -52,16 +52,17 @@ margin:2%;
 
 
 .montitre2 {
-    color: white;
-    padding: 0.8em 6%;
-
+    color: black;
+    padding: 0.8em 4%;
     text-align: left;
     /* position: absolute; */
-    font-size: 1.7em;
-    margin-top: -70px;
+    font-size: 1.5em;
+    margin-top: -60px;
+    text-shadow: none;
     width: 86%;
     position: absolute;
     z-index: 999;
+}
 }
 
 .btnext2
@@ -129,7 +130,7 @@ box-shadow:0 0 0.4em grey !important;
 	setTimeout(function(){ 
 	$('#bg1').hide();
 	$('#loader1').hide();
-	 }, 2500);
+	 }, 3500);
 }
 	   function bloc1()
 {
@@ -393,7 +394,7 @@ $('#bloc7').html('');
 
 	<div id="navbar" style='padding:10px 0px !important;' data-position="fixed" data-role="header">
 	<a href="#left-panel" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false"><img class="imgbt" src="menu.png"></a>
-		<h1><button onclick="bibi()" style="float: left;opacity: 0;">send</button><input type="text" id="myInp" style="border:1px solid silver;float: left;margin-top: -36px !important;" ></h1>
+		<h1><button onclick="bibi()" style="float: left;opacity: 0;">send</button><input type="text" id="myInp" style="border:1px solid #f0f0f0;float: left;margin-top: -31px !important;" ></h1>
 <div style="float:right;margin-top:-43px;">
 		<a href="#page2" data-transition="slide" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false">
 		<img onclick="load_home('https://passiondecor.net/commande')" style="float:right;margin-right:20px;" class="imgbt" src="shopping-cart.png">
@@ -402,7 +403,7 @@ $('#bloc7').html('');
 	</div>	</div><!-- /header -->
 	
 				<div id="setcacont" style="position:absolute;width:100%;height:100%;left:0;right:0;margin-left:auto;margin-right:auto;color:gray;font-size:15px;text-align:center;">
-<div style="float:left;width:100%;background:#f9f8f8;color:#404040;height:50px;">
+<div style="float:left;position:fixed;width:100%;background:#f9f8f8;color:#404040;height:50px;">
 <a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/nouveaux-produits')" style="float:left;margin-right:1%;margin-left:1%;width:23%;color:#404040;padding: 18px 1px;">Nouveautés</div></a>
 <a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/promotions')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;color:#404040;">Promotions</div></a>
 <a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/meilleures-ventes')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;color:#404040;">Bestseller</div></a>
@@ -423,7 +424,7 @@ $('#bloc7').html('');
 <img style="width:50%" src="pig.png"><br/>
 <strong>Economie</strong>
 </div></div>-->
-				<div id="bloc1" style="float:left;width:98%;margin:1%;">
+				<div id="bloc1" style="float:left;width:98%;margin:49px 0% 0% 1%;">
 
 </div>
 <div id="bloc2" style="float:left;width:98%;margin:1%;display:block !important">
@@ -451,8 +452,8 @@ $('#bloc7').html('');
 <div data-role="page" style="background-color:white;" id="page2">
 
 	<div id="navbar" style='padding:10px 0px !important;' data-position="fixed" data-role="header">
-<a data-transition="slide" data-direction="reverse" href="#page1" data-theme="d"  data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false"><img class="imgbt" style="vertical-align: middle;width: 24px !important;color: white;margin-top: 7px !important;" src="back.png"> </a>
-<h1><button onclick="bibi()" style="float: left;opacity: 0;">send</button><input type="text" id="myInp" style="border:1px solid silver;float: left;margin-top: -36px !important;" ></h1>
+<a data-transition="slide" data-direction="reverse" href="#page1" data-theme="d"  data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false"><img class="imgbt" style="vertical-align: middle;width: 24px !important;color: white;margin-top: 14px !important;" src="back.png"> </a>
+<h1><button onclick="bibi()" style="float: left;opacity: 0;">send</button><input type="text" id="myInp" style="border:1px solid #f0f0f0;float: left;margin-top: -31px !important;" ></h1>
 <div style="float:right;margin-top:-43px;">
 		<a href="#page2" data-transition="slide" data-theme="d" data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false">
 		<img onclick="load_home('https://passiondecor.net/commande')" style="float:right;margin-right:20px;" class="imgbt" src="shopping-cart.png">
@@ -460,7 +461,7 @@ $('#bloc7').html('');
 	
 	</div>	</div>
 	
-	<div style="float:left;width:100%;background:#f9f8f8;color:#404040;height:50px;">
+	<div style="float:left;width:100%;background:#f9f8f8;color:#404040;height:50px;position:fixed;">
 <a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/nouveaux-produits')" style="float:left;margin-right:1%;margin-left:1%;width:23%;text-align: center;color:#404040;padding: 18px 1px;">Nouveautés</div></a>
 <a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/promotions')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;text-align: center;color:#404040;">Promotions</div></a>
 <a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/meilleures-ventes')" style="float:left;margin-right:1%;width:23%;text-align: center;padding: 18px 1px;color:#404040;">Bestseller</div></a>
