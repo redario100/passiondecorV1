@@ -371,6 +371,10 @@ width:32px;
 margin-top:9px
 }
 
+a.ui-link {
+    font-size: 15px !important;
+}
+
 .in,.out {
 transition-timing-function:ease-in-out!important;
 transition-duration:150ms!important
