@@ -19,6 +19,18 @@ float:left;
 margin:2%;
 }
 
+
+.khokho
+{
+border-bottom: 4px solid #b4479a !important;
+}
+
+.khokho1
+{
+border-bottom: 4px solid #f9f8f8 !important;
+}
+
+
 .btnext
 {
     width: 21px;
@@ -343,9 +355,39 @@ $('#bloc7').html('');
 	  
 	   }
 	   
+	   function koko()
+	  {
+	   
+	  setTimeout(function(){ $("#loado").attr('src', 'load/2.png'); }, 500);
+	  setTimeout(function(){ $("#loado").attr('src', 'load/3.png'); }, 1500);
+	  setTimeout(function(){ $("#loado").attr('src', 'load/4.png'); }, 2000);
+	  setTimeout(function(){ $("#loado").attr('src', 'load/5.png'); }, 2500);
+	   setTimeout(function(){ $("#loado").attr('src', 'load/6.png'); }, 3000);
+	    setTimeout(function(){ $("#loado").attr('src', 'load/7.png'); }, 3500);
+		 setTimeout(function(){ $("#loado").attr('src', 'load/8.png'); }, 4000);
+		  setTimeout(function(){ $("#loado").attr('src', 'load/9.png'); }, 4500);
+		   setTimeout(function(){ $("#loado").attr('src', 'load/10.png'); }, 5000);
+		    setTimeout(function(){ $("#loado").attr('src', 'load/11.png'); }, 5500);
+			 setTimeout(function(){ $("#loado").attr('src', 'load/1.png'); }, 6000);
+			 	 setTimeout(function(){ $("#loado").attr('src', 'load/1.png'); }, 6500);
+				 setTimeout(function(){ $("#loado").hide();}, 7000);
+				  setTimeout(function(){ $("#loado2").hide();}, 7000);
+	   
+	   }
+	   
 </script>
 </head>
-<body onload="bloc1();bloc2();bloc3();bloc4();bloc5();bloc6();">
+<body onload="bloc1();bloc2();bloc3();bloc4();bloc5();bloc6();koko()">
+<div  id="loado2" style="position:fixed;width:100%;height:100%;z-index:9999999;background-color:white;"></div>
+<img id="loado" style="    transition: 0.5s;
+    z-index: 999999999999999999999;
+    position: absolute;
+    width: 90px;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: 48%;
+    margin-left: auto;" src="load/2.png">
 <div id="bg1" style="background:#ffffffb8;position:absolute;width:100%;top:0px;height:100%;z-index:9990;display:none;" ></div>
 <img id="loader1" style="display:none;width:50px;z-index:9991;position:absolute;left:0;right:0;margin-left:auto;margin-right:auto;top:48%;" src="load.gif">
 <div data-role="page" style="background-color:white;" id="page1">
@@ -404,10 +446,10 @@ $('#bloc7').html('');
 	
 				<div id="setcacont" style="position:absolute;width:100%;height:100%;left:0;right:0;margin-left:auto;margin-right:auto;color:gray;font-size:15px;text-align:center;">
 <div style="float:left;width:100%;background:#f9f8f8;color:#404040;height:50px;">
-<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/nouveaux-produits')" style="float:left;margin-right:1%;margin-left:1%;width:23%;color:#404040;padding: 18px 1px;text-align:center;">Nouveautés</div></a>
-<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/promotions')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;color:#404040;text-align:center;">Promotions</div></a>
-<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/meilleures-ventes')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;color:#404040;text-align:center;">Bestseller</div></a>
-<a data-transition="slide" href="#page1"><div onclick="load_home('#')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;color:#404040;text-align:center;" >Ventes Flash</div></a>
+<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/nouveaux-produits');$('.nouv').addClass('khokho');$('.nouv2').removeClass('khokho');$('.nouv3').removeClass('khokho');$('.nouv4').removeClass('khokho');" style="float:left;margin-right:1%;margin-left:1%;width:23%;color:#404040;padding: 14px 1px;border-bottom: 4px solid #f9f8f8 !important;text-align:center;">Nouveautés</div></a>
+<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/promotions');$('.nouv').removeClass('khokho');$('.nouv2').addClass('khokho');$('.nouv3').removeClass('khokho');$('.nouv4').removeClass('khokho');" style="float:left;margin-right:1%;width:23%;padding: 14px 1px;border-bottom: 4px solid #f9f8f8 !important;color:#404040;text-align:center;">Promotions</div></a>
+<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/meilleures-ventes');$('.nouv').removeClass('khokho');$('.nouv2').removeClass('khokho');$('.nouv3').addClass('khokho');$('.nouv4').removeClass('khokho');" style="float:left;margin-right:1%;width:23%;padding: 14px 1px;border-bottom: 4px solid #f9f8f8 !important;color:#404040;text-align:center;">Bestseller</div></a>
+<a data-transition="slide" href="#page1"><div onclick="load_home('#');$('.nouv').removeClass('khokho');$('.nouv2').removeClass('khokho');$('.nouv3').removeClass('khokho');$('.nouv4').addClass('khokho');" style="float:left;margin-right:1%;width:23%;padding: 14px 1px;border-bottom: 4px solid #f9f8f8 !important;color:#404040;text-align:center;" >Ventes Flash</div></a>
 </div>
 <!--<div style="float:left;width:100%;">
 				<div id="bloc0">
@@ -462,10 +504,10 @@ $('#bloc7').html('');
 	</div>	</div>
 	
 <div style="float:left;width:100%;background:#f9f8f8;color:#404040;height:50px;">
-<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/nouveaux-produits')" style="float:left;margin-right:1%;margin-left:1%;width:23%;color:#404040;padding: 18px 1px;text-align:center;">Nouveautés</div></a>
-<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/promotions')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;color:#404040;text-align:center;">Promotions</div></a>
-<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/meilleures-ventes')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;color:#404040;text-align:center;">Bestseller</div></a>
-<a data-transition="slide" href="#page1"><div onclick="load_home('#')" style="float:left;margin-right:1%;width:23%;padding: 18px 1px;color:#404040;text-align:center;" >Ventes Flash</div></a>
+<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/nouveaux-produits');$('.nouv').addClass('khokho');$('.nouv2').removeClass('khokho');$('.nouv3').removeClass('khokho');$('.nouv4').removeClass('khokho');" class="nouv" style="float:left;margin-right:1%;margin-left:1%;width:23%;color:#404040;padding: 14px 1px;text-align:center;">Nouveautés</div></a>
+<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/promotions');$('.nouv').removeClass('khokho');$('.nouv2').addClass('khokho');$('.nouv3').removeClass('khokho');$('.nouv4').removeClass('khokho');" class="nouv2" style="float:left;margin-right:1%;width:23%;padding: 14px 1px;color:#404040;text-align:center;">Promotions</div></a>
+<a data-transition="slide" href="#page2"><div onclick="load_home('https://passiondecor.net/meilleures-ventes');$('.nouv').removeClass('khokho');$('.nouv2').removeClass('khokho');$('.nouv3').addClass('khokho');$('.nouv4').removeClass('khokho');" class="nouv3" style="float:left;margin-right:1%;width:23%;padding: 14px 1px;color:#404040;text-align:center;">Bestseller</div></a>
+<a data-transition="slide" href="#page1"><div onclick="load_home('#');$('.nouv').removeClass('khokho');$('.nouv2').removeClass('khokho');$('.nouv3').removeClass('khokho');$('.nouv4').addClass('khokho');" class="nouv4" style="float:left;margin-right:1%;width:23%;padding: 14px 1px;color:#404040;text-align:center;" >Ventes Flash</div></a>
 </div>
 
 
