@@ -3,17 +3,17 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.fly.view"
+        id        = "com.passiondecorx.net"
         version   = "1.0.0">
 
-    <name>Fly View</name>
+    <name>Passiondecorx</name>
 
     <description>
-       Fly View
+       Passiondecorx
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
-        Fly View
+       Passiondecorx
     </author>
 
     <!--
@@ -22,7 +22,7 @@
         permission on your app, which PhoneGap requires.
     -->
 	
-	<content src="home.html" />
+	<content src="index.html" />
 		<feature name="InAppBrowser">
     <param name="android-package" value="org.apache.cordova.InAppBrowser" />
 </feature>
