@@ -4,23 +4,17 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.passiondecorx.net"
-        version   = "1.0.0">
+        version   = "10.0.0">
 
-    <name>Passiondecorx</name>
+    <name>Passiondecor</name>
 
     <description>
-       Passiondecorx
+     Passiondecor
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
-       Passiondecorx
+    Passiondecor
     </author>
-
-    <!--
-        If you do not want any permissions to be added to your app, add the
-        following tag to your config.xml; you will still have the INTERNET
-        permission on your app, which PhoneGap requires.
-    -->
 	
 	<content src="index.html" />
 		<feature name="InAppBrowser">
@@ -30,7 +24,8 @@
 	<preference name="stay-in-webview" value="true" />
 	
    <preference name="DisallowOverscroll" value="true" />
-    <preference name="android-minSdkVersion" value="14" />
+   <preference name="AppendUserAgent" value="Cordova" />
+    <preference name="android-minSdkVersion" value="26" />
 	<preference name="fullscreen" value="false" />
 	 <!-- Customize your app and platform with the preference element. -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
@@ -102,7 +97,7 @@
     <icon src="res/icon/ios/icon@2x.png" platform="ios" width="114" height="114" />
     <icon src="res/icon/ios/icon-72@2x.png" platform="ios" width="144" height="144" />
 	<icon src="res/icon/ios/icon-60@3x.png" platform="ios" width="180" height="180" />
-	<icon src="res/icon/ios/icon-40@2x" platform="ios" width="80" height="80" />
+	<icon src="res/icon/ios/icon-40@2x.png" platform="ios" width="80" height="80" />
 	
 	<icon src="res/icon/ios/icon-60.png" platform="ios" width="60" height="60" />
 		<icon src="res/icon/ios/icon-50.png" platform="ios" width="50" height="50" />
@@ -144,7 +139,7 @@
 	
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-    <string>100</string>
+    <string>1000</string>
     </gap:config-file>
 
 	
